@@ -27,8 +27,9 @@ body {
     font-family: Tahoma, sans-serif;
     line-height: 1;
     min-width: 500px;
-    background-color: #f1f2f2;
-}
+    background-image: url('http://www.icanread.asia/uploads/homepage/2013/09/22/112_o_background.jpg');
+    background-repeat: no-repeat;
+ }   
 body.rtl {
     text-align: right;
     direction: rtl;
@@ -354,7 +355,8 @@ a:hover .image-close-window {
 /* sending message area (#send) */
 #post-message {
 }
-#send-message, .submit-button {
+
+.submit-button {
     float: right;
     width: 190px;
     height: 33px;
@@ -367,7 +369,7 @@ a:hover .image-close-window {
     color: #495151;
     background: url("images/submit.gif") no-repeat 0 0 transparent;
 }
-#send-message:hover, .submit-button:hover {
+.submit-button:hover {
     color: #000000;
     background: url("images/submit.gif") no-repeat -190px 0 transparent;
 }
@@ -477,7 +479,12 @@ ul li {
     border-collapse: collapse;
     vertical-align: top;
 }
-#content-wrapper #send-message {
+
+#send-message {
+    margin-top: 10px;
+}
+
+#content-wrapper {
     float: left;
     margin-top: 10px;
 }
@@ -549,3 +556,8 @@ ul li {
     float: none;
     display: inline-block;
 }
+
+button[type="reset"]    {
+    background-color:transparent;
+    border:1px solid black;
+} 

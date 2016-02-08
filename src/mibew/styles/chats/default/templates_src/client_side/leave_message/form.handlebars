@@ -5,15 +5,14 @@
     {{#unless groups}}{{#if groupId}}<input type="hidden" name="group" value="{{groupId}}"/>{{/if}}{{/unless}}
 
     <div class="errors"></div>
-
     <table cellspacing="1" cellpadding="5" border="0" class="form">
         <tr>
-            <td><strong>{{l10n "Your email"}}:</strong></td>
-            <td><input type="text" name="email" size="50" value="{{email}}" class="username"/></td>
+            <td><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"style="color:#80bfff"></i></span></td>
+            <td><input type="text" name="email" placeholder="Email" class="username" size="50" autofocus="autofocus" value="{{email}}" required> </td>
         </tr>
         <tr>
-            <td><strong>{{l10n "Your name"}}:</strong></td>
-            <td><input type="text" name="name" size="50" value="{{name}}" class="username"/></td>
+            <td><span class="input-group-addon"><i class="glyphicon glyphicon-user" style="color:#80bfff"></i></span></td>
+            <td><input type="text" name="name" size="50" placeholder="Name" autofocus="autofocus" value="{{name}}" class="username" required></td>
         </tr>
     {{#if groups}}
         <tr>
@@ -34,10 +33,8 @@
         </tr>
     {{/if}}
         <tr>
-            <td><strong>{{l10n "Message"}}:</strong></td>
-            <td valign="top">
-                <textarea name="message" tabindex="0" cols="40" rows="5">{{message}}</textarea>
-            </td>
+        <td><span class="input-group-addon"><i class="glyphicon glyphicon-comment" style="color:#80bfff"></i></span></td>
+        <td valign="top"><textarea name="Message" tabindex="0" cols="40" rows="5"rows="6" class="form-control" type="text" required>{{message}}</textarea></td>
         </tr>
     {{#if showCaptcha}}
         <tr>
@@ -46,7 +43,10 @@
         </tr>
     {{/if}}
     </table>
-    <a href="javascript:void(0);" class="but" id="send-message">{{l10n "Send"}}</a>
+    <a href="javascript:void(0);" class="but" id="send-message"><button type="submit" class="btn btn-info pull-right" >{{l10n "Send"}}<span class="glyphicon glyphicon-send"></span></button></a>
+
+    <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+
     <div class="clear">&nbsp;</div>
 </form>
 <div id="ajax-loader"><img src="{{page.stylePath}}/images/ajax-loader.gif" alt="Loading..." /></div>
