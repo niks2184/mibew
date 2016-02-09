@@ -6,22 +6,27 @@
 
     <div class="errors"></div>
     <table class="form">
-    <div class="panel panel-default form">
+    <div class="npanel panel panel-default form">
                          
         <div class="panel-body">
           <div class="form-group">
           <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"style="color:#80bfff"></i></span>
-            <input class="form-control" type="text" name="email" placeholder="Email" class="username" size="50" autofocus="autofocus" value="{{email}}" required>
+            <input class="form-control" type="text" name="email" placeholder="Email" class="username" autofocus="autofocus" value="{{email}}" required>
            </div>
            </div>
          <div class="form-group">
          <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user" style="color:#80bfff"></i></span>
-            <input type="text" name="name" class="form-control" size="50" placeholder="Name" autofocus="autofocus" value="{{name}}" class="username" required>
+            <input type="text" name="name" class="form-control" placeholder="Name" autofocus="autofocus" value="{{name}}" class="username" required>
          </div>
          </div>
-        
+        <div class="form-group">
+         <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-phone" style="color:#80bfff"></i></span>
+            <input type="text" name="InputCno" class="form-control" placeholder="Phone">
+         </div>
+         </div>
     {{#if groups}}
         <tr>
             <td class="text"><strong>{{l10n "Choose Department:"}}</strong></td>
@@ -48,18 +53,15 @@
         </div>
     {{#if showCaptcha}}
         <tr>
-
             <td><img id="captcha-img" src="captcha"/></td>
             <td><input type="text" name="captcha" size="50" maxlength="15" value="" class="username"/></td>
         </tr>
     {{/if}}
     </table>
-    </div>
-    </div>
     <a href="javascript:void(0);" class="but" id="send-message"><button type="submit" class="btn btn-info pull-right" >{{l10n "Send"}}<span class="glyphicon glyphicon-send"></span></button></a>
-
     <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
-
+</div>
+    </div>
     <div class="clear">&nbsp;</div>
 </form>
 <div id="ajax-loader"><img src="{{page.stylePath}}/images/ajax-loader.gif" alt="Loading..." /></div>
