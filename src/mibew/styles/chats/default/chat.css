@@ -119,9 +119,11 @@ img {
     text-decoration: none;
 }
 #page-title {
-    float: right;
+    position:absolute;
     margin-top: 5px;
     text-align: right;
+    right:15px;
+    bottom:20px;
 }
 
 /* common controls */
