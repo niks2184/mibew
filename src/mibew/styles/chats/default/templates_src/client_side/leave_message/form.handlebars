@@ -5,15 +5,23 @@
     {{#unless groups}}{{#if groupId}}<input type="hidden" name="group" value="{{groupId}}"/>{{/if}}{{/unless}}
 
     <div class="errors"></div>
-    <table cellspacing="1" cellpadding="5" border="0" class="form">
-        <tr>
-            <td><span class="input-group-addon"><i class="glyphicon glyphicon-envelope"style="color:#80bfff"></i></span></td>
-            <td><input type="text" name="email" placeholder="Email" class="username" size="50" autofocus="autofocus" value="{{email}}" required> </td>
-        </tr>
-        <tr>
-            <td><span class="input-group-addon"><i class="glyphicon glyphicon-user" style="color:#80bfff"></i></span></td>
-            <td><input type="text" name="name" size="50" placeholder="Name" autofocus="autofocus" value="{{name}}" class="username" required></td>
-        </tr>
+    <table class="form">
+    <div class="panel panel-default form">
+                         
+        <div class="panel-body">
+          <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"style="color:#80bfff"></i></span>
+            <input class="form-control" type="text" name="email" placeholder="Email" class="username" size="50" autofocus="autofocus" value="{{email}}" required>
+           </div>
+           </div>
+         <div class="form-group">
+         <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user" style="color:#80bfff"></i></span>
+            <input type="text" name="name" class="form-control" size="50" placeholder="Name" autofocus="autofocus" value="{{name}}" class="username" required>
+         </div>
+         </div>
+        
     {{#if groups}}
         <tr>
             <td class="text"><strong>{{l10n "Choose Department:"}}</strong></td>
@@ -32,17 +40,22 @@
             </td>
         </tr>
     {{/if}}
-        <tr>
-        <td><span class="input-group-addon"><i class="glyphicon glyphicon-comment" style="color:#80bfff"></i></span></td>
-        <td valign="top"><textarea name="Message" tabindex="0" cols="40" rows="5"rows="6" class="form-control" type="text" required>{{message}}</textarea></td>
-        </tr>
+        <div class="form-group">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-comment" style="color:#80bfff"></i></span>
+        <textarea name="Message" tabindex="0" cols="40" rows="5"rows="6" class="form-control" type="text" required>{{message}}</textarea>
+        </div>
+        </div>
     {{#if showCaptcha}}
         <tr>
+
             <td><img id="captcha-img" src="captcha"/></td>
             <td><input type="text" name="captcha" size="50" maxlength="15" value="" class="username"/></td>
         </tr>
     {{/if}}
     </table>
+    </div>
+    </div>
     <a href="javascript:void(0);" class="but" id="send-message"><button type="submit" class="btn btn-info pull-right" >{{l10n "Send"}}<span class="glyphicon glyphicon-send"></span></button></a>
 
     <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
