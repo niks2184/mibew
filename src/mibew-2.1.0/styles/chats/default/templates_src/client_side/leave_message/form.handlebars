@@ -1,0 +1,68 @@
+<form name="leaveMessageForm" method="post" action="">
+    <input type="hidden" name="style" value="{{page.style}}"/>
+    <input type="hidden" name="info" value="{{info}}"/>
+    <input type="hidden" name="referrer" value="{{referrer}}"/>
+    {{#unless groups}}{{#if groupId}}<input type="hidden" name="group" value="{{groupId}}"/>{{/if}}{{/unless}}
+
+    <div class="errors"></div>
+    <div class="panel panel-default.">
+        <div class="panel-body">
+    <table class="form">
+    
+          <div class="form-group">
+          <div class="input-group">
+            <span class=
+            "input-group-addon"><i class="glyphicon glyphicon-envelope"style="color:#80bfff"></i></span>
+            <input class="form-control" type="text" name="email" placeholder="Email" class="username" autofocus="autofocus" value="{{email}}" required>
+           </div>
+           </div>
+         <div class="form-group">
+         <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user" style="color:#80bfff"></i></span>
+            <input type="text" name="name" class="form-control" placeholder="Name" autofocus="autofocus" value="{{name}}" class="username" required>
+         </div>
+         </div>
+        <div class="form-group">
+         <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-phone" style="color:#80bfff"></i></span>
+            <input type="text" name="InputCno" class="form-control" placeholder="Phone">
+         </div>
+         </div>
+    {{#if groups}}
+        <tr>
+            <td class="text"><strong>{{l10n "Choose Department:"}}</strong></td>
+            <td>
+                <select name="group" style="min-width:200px;">
+                    {{#each groups}}
+                        <option value="{{this.id}}" {{#if this.selected}}selected="selected"{{/if}}>{{this.name}}</option>
+                    {{/each}}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="text"><strong>{{l10n "Department description:"}}</strong></td>
+            <td class="text" id="group-description">
+                {{#each groups}}{{#if this.selected}}{{this.description}}{{/if}}{{/each}}
+            </td>
+        </tr>
+    {{/if}}
+        <div class="form-group">
+        <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-comment" style="color:#80bfff"></i></span>
+        <textarea name="Message" tabindex="0" cols="40" rows="2" class="form-control" type="text" required>{{message}}</textarea>
+        </div>
+        </div>
+    {{#if showCaptcha}}
+        <tr>
+            <td><img id="captcha-img" src="captcha"/></td>
+            <td><input type="text" name="captcha" size="50" maxlength="15" value="" class="username"/></td>
+        </tr>
+    {{/if}}
+    </table>
+    <a href="javascript:void(0);" class="but" id="send-message"><button type="submit" class="btn btn-info pull-right" >{{l10n "Send"}}<span class="glyphicon glyphicon-send"></span></button></a>
+    <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+</div>
+    </div>
+    <div class="clear">&nbsp;</div>
+</form>
+<div id="ajax-loader"><img src="{{page.stylePath}}/images/ajax-loader.gif" alt="Loading..." /></div>
