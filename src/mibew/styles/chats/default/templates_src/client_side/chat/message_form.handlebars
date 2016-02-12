@@ -1,7 +1,7 @@
 <div id="message">
 {{#if user.canPost}}
     <div class="background-center"><div class="background-left"><div class="background-right">
-        <textarea id="message-input" class="message" tabindex="0" rows="4" cols="10"></textarea>
+        <textarea id="message-input" class="message" tabindex="0" rows="4" cols="10" placeholder="Enter Your Message"></textarea>
     </div></div></div>
 {{/if}}
 </div>
@@ -19,7 +19,7 @@
                 </select>
             {{/if}}
         </div>
-        <a href="javascript:void(0)" id="send-message" title="{{l10n "Send message"}}">{{{l10n "Send ({0})" sendShortcut}}}</a>
+        <a href="javascript:void(0)" id="send-message" title="{{l10n "Send message"}}"><button type="submit" class="btn btn-primary pull-right" >{{{l10n "Send" sendShortcut}}}</button></a>
     </div>
 {{/if}}
 </div>
