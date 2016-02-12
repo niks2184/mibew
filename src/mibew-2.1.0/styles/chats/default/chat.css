@@ -27,8 +27,8 @@ body {
     font-family: 'Open Sans';
     line-height: 1;
     min-width: 500px;
-    background-image: url('http://www.icanread.asia/uploads/homepage/2013/09/22/112_o_background.jpg');
-    background-repeat: repeat;
+   /* background-image: url('http://www.icanread.asia/uploads/homepage/2013/09/22/112_o_background.jpg');
+    background-repeat: repeat;*/
  } 
  
      
@@ -145,10 +145,10 @@ img {
     background: transparent url("images/buttons.gif") scroll no-repeat 0 0;
 }
 .image-close-window {
-	background-position: -128px -16px;
+    background-position: -128px -16px;
 }
 a:hover .image-close-window {
-	background-position: -128px 0;
+    background-position: -128px 0;
 }
 .close-control .tpl-image {
     background-position: -128px -16px;
@@ -259,8 +259,9 @@ a:hover .image-close-window {
 #chat .background-shady-right {
     position: relative;
     padding: 0 4px 40px;
-    background: transparent url("images/sdwbgr.png") scroll no-repeat 100% 100%;
-    _zoom: 1; /* IE6 fix */
+    background:rgba(46, 51, 56, 0.2);
+   /* background: transparent url("images/sdwbgr.png") scroll no-repeat 100% 100%;
+    _zoom: 1; /* IE6 fix */*/
 }
 #status-region {
     position: absolute;
@@ -339,8 +340,8 @@ a:hover .image-close-window {
     background: transparent url("images/message.png") scroll no-repeat 0 0;
 }
 #message .background-right {
-    height: 58px;
-    padding: 14px 14px 23px;
+    height: 39px;
+    padding: 14px 14px 2px;
     background: transparent url("images/message.png") scroll no-repeat 100% -190px;
 }
 #message-input {
@@ -563,10 +564,7 @@ ul li {
     display: inline-block;
 }
 
-button[type="reset"]    {
-    background-color:transparent;
-    border:1px solid black;
-} 
+
 .panel-body{
     background: rgba(46, 51, 56, 0.2)!important;
 }
@@ -587,18 +585,18 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
    margin-top:25px
 }
 .round.hollow a {
-    border: 3px solid #80bfff;
+    border: 3px solid;
     border-radius: 35px;
-    color: #80bfff;
+    color:;
     font-size: 23px;
     padding: 5px 5px;
     text-decoration: none;
     font-family: 'Open Sans';
 }
 .round.hollow a:hover {
-    border: 3px solid #000;
+    border: 3px solid;
     border-radius: 35px;
-    color: #000;
+    color:;
     font-size: 23px;
     padding: 10px 10px;
     text-decoration: none;

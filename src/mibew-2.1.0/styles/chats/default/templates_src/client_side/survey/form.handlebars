@@ -30,7 +30,7 @@
     {{/if}}
            <div class="form-group">
          <div class="input-group">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-user" style="color:#80bfff"></i></span>
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user text-primary"></i></span>
             <input type="text" name="name" class="form-control" placeholder="Name" autofocus="autofocus" value="{{name}}" {{#unless canChangeName}}disabled="disabled"{{/unless}}class="username" required>
          </div>
          </div>
@@ -48,8 +48,8 @@
     {{/if}}
     </table>
     
-        <a href="javascript:void(0);" class="but" id="submit-survey"><div class="round hollow text-center">
-        <span class="glyphicon glyphicon-comment"></span>{{l10n "Start Chat"}}
+        <a href="javascript:void(0);" class="but btn-primary" id="submit-survey"><div class="round hollow text-center">
+        <span class="glyphicon glyphicon-comment"></span>{{l10n " Start Chat"}}
         </a>
         </div>
     </div>
